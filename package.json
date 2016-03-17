@@ -1,0 +1,23 @@
+{
+  "name": "panini2016-server",
+  "version": "1.0.0",
+  "description": "Small tool to manage your Panini card for euro 2016. Server side",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gallib/panini2016-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gallib/panini2016-server/issues",
+    "email": "alain@gallib.net"
+  },
+  "author": "Alain Pellaux <alain@gallib.net>",
+  "license": "GPLv3",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.7"
+  }
+}
