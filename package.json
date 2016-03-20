@@ -11,6 +11,9 @@
     "url": "https://github.com/gallib/panini2016-server/issues",
     "email": "alain@gallib.net"
   },
+  "scripts": {
+    "import": "node import.js"
+  },
   "author": "Alain Pellaux <alain@gallib.net>",
   "license": "GPLv3",
   "private": true,
@@ -18,6 +21,7 @@
     "body-parser": "^1.15.0",
     "cors": "^2.7.1",
     "express": "^4.13.4",
-    "mongoose": "^4.4.7"
+    "mongoose": "^4.4.7",
+    "shortid": "^2.2.4"
   }
 }
