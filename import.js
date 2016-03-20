@@ -13,7 +13,7 @@ for (var i = 0; i < data.length; i++) {
     for (var j = 0 ; j < data[i].stickers.length; j++) {
         var sticker = new stickerModel();
 
-        sticker.number = data[i].stickers[j].number;
+        sticker.number = data[i].stickers[j];
         sticker.save();
 
         stickers.push(sticker._id);
@@ -29,4 +29,4 @@ for (var i = 0; i < data.length; i++) {
 // Find a way to close the connection once import is done (by callback ?)
 //mongoose.connection.close();
 
-console.log('test');
+console.log('Import terminé');
