@@ -5,7 +5,7 @@ Permettant de gérer sa liste de vignettes Panini
 ## Installation
 
 ```sh
-$ npm run import
 $ npm install
+$ npm run import
 $ npm start
 ```
