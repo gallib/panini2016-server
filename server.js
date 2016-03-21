@@ -37,7 +37,7 @@ router
             params.public_id = req.query.public_id;
         }
 
-        ownerModel.findOne(params)
+        ownerModel.findOne(params, '_id name public_id collections')
         .populate('collections')
         .exec(function(err, owner){
             if (err) {
@@ -64,7 +64,7 @@ router
             owner    = new ownerModel();
 
         if (req.body.owner === undefined) {
-            response = {'error': true, 'message': 'Invalid data'};
+            response = {error: true, message: 'Invalid data'};
             res.json(response);
         } else {
             stickerModel.find({}, function(err, stickers) {
@@ -88,9 +88,9 @@ router
 
                 owner.save(function(err) {
                     if (err) {
-                        response = {'error': true, 'message': 'Error while adding data'};
+                        response = {error: true, message: 'Error while adding data'};
                     } else {
-                        response = {'error': false, 'message': 'Data added', owner: owner};
+                        response = {error: false, message: 'Data added', owner: owner};
                     }
 
                     res.json(response);
@@ -114,9 +114,9 @@ router
         .populate('stickers')
         .exec(function(err, data){
             if (err) {
-                response = {'error': true, 'message': 'Error while fetching data'};
+                response = {error: true, message: 'Error while fetching data'};
             } else {
-                response = {'error': false, 'categories': data};
+                response = {error: false, categories: data};
             }
 
             res.json(response);
@@ -128,9 +128,9 @@ router
 
         db.save(function(err) {
             if (err) {
-                response = {'error': true, 'message': 'Error while adding data'};
+                response = {error: true, message: 'Error while adding data'};
             } else {
-                response = {'error': false, 'message': 'Data added'};
+                response = {error: false, message: 'Data added'};
             }
 
             res.json(response);
